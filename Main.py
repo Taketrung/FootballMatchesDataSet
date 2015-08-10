@@ -2,7 +2,7 @@
 __author__ = 'Richard'
 
 import ScrapBDFutbol as bdFutbol
-import ScrapTemporada2014 as thisTemporada
+import ScrapTemporada2015 as thisTemporada
 
 # Guardo los partidos de futbol en un diccionario
 partidos = dict()
@@ -11,7 +11,7 @@ partidos = dict()
 partidos = bdFutbol.getPartidos()
 
 # Obtengo los partidos de futbol de la temporada presente
-partidos2014_15 = thisTemporada.getPartidos(bdFutbol.getContador())
+partidos2015_16 = thisTemporada.getPartidos(bdFutbol.getContador())
 
 
 
@@ -19,7 +19,7 @@ file = open('DataSetPartidos.txt','w')
 for key,value in partidos.items():
     file.write('%s\n' %str(value))
 
-for key,value in partidos2014_15.items():
+for key,value in partidos2015_16.items():
     file.write('%s\n' %str(value))
 
 file.close()
